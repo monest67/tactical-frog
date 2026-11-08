@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactical Frog — Тактическая одежда в Иркутске</title>
+    <meta name="description" content="TACTICAL FROG — магазин тактической одежды, экипировки для страйкбола, охоты и туризма в Иркутске. Выгодные цены и скидки до 80%.">
+    <meta name="keywords" content="тактическая одежда, Иркутск, military, outdoor, страйкбол, охота, туризм, Tactical Frog">
+    <meta name="theme-color" content="#111111">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #111111;
+            --bg-secondary: #222222;
+            --color-olive: #4A5330;
+            --color-sand: #C3B091;
+            --color-accent: #F07824;
+            --text-primary: #F2F0E9;
+            --text-secondary: #A5A5A0;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Roboto Condensed', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-family: var(--font-heading);
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn--accent {
+            background-color: var(--color-accent);
+            color: var(--bg-primary);
+            border-color: var(--color-accent);
+        }
+
+        .btn--accent:hover {
+            background-color: transparent;
+            color: var(--color-accent);
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border-color: var(--text-primary);
+        }
+
+        .btn--outline:hover {
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .btn--olive {
+            background-color: var(--color-olive);
+            color: var(--text-primary);
+            border-color: var(--color-olive);
+        }
+
+        .btn--olive:hover {
+            background-color: transparent;
+            color: var(--color-olive);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 48px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .fade-in {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* HEADER */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 16px 0;
+        }
+
+        .header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .logo__icon {
+            width: 32px;
+            height: 32px;
+            fill: var(--color-accent);
+        }
+
+        .header__nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .header__actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .menu-btn span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background-color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        .menu-btn.is-active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-btn.is-active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-btn.is-active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero__image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero__image-wrapper img {
+            object-position: center 20%;
+        }
+
+        .hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(17,17,17,0.98) 0%, rgba(17,17,17,0.85) 40%, rgba(17,17,17,0.4) 100%);
+            z-index: 2;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            padding-top: 60px;
+        }
+
+        .hero__tag {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            color: var(--color-sand);
+            border-left: 3px solid var(--color-accent);
+            padding-left: 12px;
+            margin-bottom: 24px;
+        }
+
+        .hero__title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 24px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero__subtitle {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        .hero__actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .hero__mark {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* CATALOG */
+        .catalog {
+            padding: 100px 0;
+            background-color: var(--bg-primary);
+        }
+
+        .catalog__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .catalog__card {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background-color: var(--bg-secondary);
+            cursor: pointer;
+            group: true;
+        }
+
+        .catalog__card-image {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .catalog__card:hover .catalog__card-image {
+            transform: scale(1.05);
+        }
+
+        .catalog__card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 32px;
+            background: linear-gradient(to top, rgba(17,17,17,0.95) 0%, rgba(17,17,17,0) 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .catalog__card-mark {
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            color: var(--color-accent);
+            letter-spacing: 0.15em;
+        }
+
+        .catalog__card-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .catalog__card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* ADVANTAGES */
+        .advantages {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .advantages__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .advantage__item {
+            padding: 32px;
+            border: 1px solid rgba(255,255,255,0.05);
+            background-color: rgba(17,17,17,0.5);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .advantage__item:hover {
+            border-color: var(--color-olive);
+        }
+
+        .advantage__item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-olive);
+        }
+
+        .advantage__number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            line-height: 1;
+            margin-bottom: 16px;
+            opacity: 0.8;
+        }
+
+        .advantage__title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .advantage__text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .advantage__item--highlight {
+            grid-column: span 1;
+            border-color: var(--color-accent);
+            background-color: rgba(240, 120, 36, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .advantage__item--highlight .advantage__number {
+            font-size: 4rem;
+            color: var(--color-accent);
+            opacity: 1;
+        }
+
+        .advantage__item--highlight .advantage__title {
+            font-size: 2rem;
+            color: var(--color-accent);
+        }
+
+        /* CONTACTS */
+        .contacts {
+            padding: 100px 0;
+            background-color: var(--bg-primary);
+        }
+
+        .contacts__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: stretch;
+        }
+
+        .contacts__info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .contact__block {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact__label {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            color: var(--color-sand);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .contact__value {
+            font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .contact__value--accent {
+            color: var(--color-accent);
+        }
+
+        .contact__value a {
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact__value a:hover {
+            border-bottom-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        .contacts__image-wrapper {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+            background-color: var(--bg-secondary);
+            overflow: hidden;
+        }
+
+        .contacts__image-label {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 8px 16px;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            color: var(--color-sand);
+            border-left: 3px solid var(--color-accent);
+            z-index: 2;
+        }
+
+        .contacts__actions {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #0a0a0a;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .footer__top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+        }
+
+        .footer__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 16px;
+            max-width: 300px;
+            line-height: 1.5;
+        }
+
+        .footer__heading {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer__links a {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .footer__links a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer__copyright {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer__motto {
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            color: var(--color-olive);
+            text-transform: uppercase;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .catalog__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .catalog__card:last-child {
+                grid-column: span 2;
+                height: 400px;
+            }
+            .advantages__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .advantage__item--highlight {
+                grid-column: span 2;
+            }
+            .footer__top {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: flex;
+            }
+
+            .header__nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background-color: var(--bg-secondary);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 100px 32px 32px;
+                gap: 32px;
+                transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                border-left: 1px solid rgba(255,255,255,0.05);
+            }
+
+            .header__nav.is-active {
+                right: 0;
+            }
+
+            .header__actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .header__actions .btn {
+                width: 100%;
+            }
+
+            .catalog__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .catalog__card, .catalog__card:last-child {
+                grid-column: span 1;
+                height: 400px;
+            }
+
+            .advantages__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .advantage__item--highlight {
+                grid-column: span 1;
+            }
+
+            .contacts__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contacts__image-wrapper {
+                min-height: 300px;
+                order: -1;
+            }
+
+            .footer__top {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero__content {
+                padding-top: 40px;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <svg class="logo__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    <path d="M12 4l-1.5 3h3L12 4z" fill="currentColor"/>
+                    <path d="M7 14c0-2.5 2-4.5 4.5-4.5S16 11.5 16 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                TACTICAL FROG
+            </a>
+            
+            <button class="menu-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="header__nav">
+                <div class="header__actions">
+                    <a href="#catalog" class="btn btn--outline">КАТАЛОГ</a>
+                    <a href="tel:+73952717560" class="btn btn--accent">СВЯЗАТЬСЯ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero__image-wrapper">
+                <img src="hero-man.jpg" alt="Мужчина в тактической одежде Tactical Frog">
+            </div>
+            <div class="hero__overlay"></div>
+            <div class="container hero__content fade-in">
+                <span class="hero__tag">TACTICAL GEAR / URBAN OUTDOOR</span>
+                <h1 class="hero__title">ТАКТИЧЕСКАЯ ОДЕЖДА<br>В ИРКУТСКЕ</h1>
+                <p class="hero__subtitle">Надежная одежда для тех, кто выбирает практичность, свободу движения и готовность к любым условиям</p>
+                <div class="hero__actions">
+                    <a href="#catalog" class="btn btn--accent">СКИДКИ ДО 80%</a>
+                    <span class="hero__mark">Одежда. Экипировка. Активный отдых.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2 class="section-title fade-in">ВЫБЕРИ СВОЮ ЭКИПИРОВКУ</h2>
+                <p class="section-subtitle fade-in">Практичная одежда для города, природы и активного образа жизни</p>
+                
+                <div class="catalog__grid">
+                    <article class="catalog__card fade-in">
+                        <div class="catalog__card-image">
+                            <img src="jacket.jpg" alt="Тактическая куртка">
+                        </div>
+                        <div class="catalog__card-overlay">
+                            <span class="catalog__card-mark">01 / OUTERWEAR</span>
+                            <h3 class="catalog__card-title">КУРТКИ</h3>
+                            <p class="catalog__card-desc">Защита и комфорт в любых условиях</p>
+                        </div>
+                    </article>
+
+                    <article class="catalog__card fade-in">
+                        <div class="catalog__card-image">
+                            <img src="pants.jpg" alt="Тактические брюки карго">
+                        </div>
+                        <div class="catalog__card-overlay">
+                            <span class="catalog__card-mark">02 / TACTICAL PANTS</span>
+                            <h3 class="catalog__card-title">БРЮКИ</h3>
+                            <p class="catalog__card-desc">Функциональность и свобода движения</p>
+                        </div>
+                    </article>
+
+                    <article class="catalog__card fade-in">
+                        <div class="catalog__card-image">
+                            <img src="shirt.jpg" alt="Тактическая рубашка">
+                        </div>
+                        <div class="catalog__card-overlay">
+                            <span class="catalog__card-mark">03 / TACTICAL SHIRTS</span>
+                            <h3 class="catalog__card-title">РУБАШКИ</h3>
+                            <p class="catalog__card-desc">Практичность в каждой детали</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages" class="advantages">
+            <div class="container">
+                <h2 class="section-title fade-in">ПОЧЕМУ ВЫБИРАЮТ TACTICAL FROG</h2>
+                <p class="section-subtitle fade-in">Все необходимое для комфортной покупки и выгодного выбора</p>
+                
+                <div class="advantages__grid">
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">01</div>
+                        <h3 class="advantage__title">ТАКТИЧЕСКИЙ СТИЛЬ</h3>
+                        <p class="advantage__text">Практичная одежда для города, охоты, страйкбола и активного отдыха.</p>
+                    </div>
+                    
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">02</div>
+                        <h3 class="advantage__title">ДОСТАВКА</h3>
+                        <p class="advantage__text">Возможность заказать понравившиеся товары с доставкой.</p>
+                    </div>
+                    
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">03</div>
+                        <h3 class="advantage__title">САМОВЫВОЗ</h3>
+                        <p class="advantage__text">Заберите покупку самостоятельно в нашем магазине в Иркутске.</p>
+                    </div>
+                    
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">04</div>
+                        <h3 class="advantage__title">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</h3>
+                        <p class="advantage__text">Отличный подарок для тех, кто ценит практичную одежду и экипировку.</p>
+                    </div>
+                    
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">05</div>
+                        <h3 class="advantage__title">ДИСКОНТНАЯ СИСТЕМА</h3>
+                        <p class="advantage__text">Выгодные условия покупок для участников дисконтной системы.</p>
+                    </div>
+                    
+                    <div class="advantage__item advantage__item--highlight fade-in">
+                        <div class="advantage__number">06</div>
+                        <h3 class="advantage__title">СКИДКИ ДО 80%</h3>
+                        <p class="advantage__text">Возможность приобрести товары с существенной выгодой.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2 class="section-title fade-in">НАЙДИ НАС В ИРКУТСКЕ</h2>
+                <p class="section-subtitle fade-in">Заглядывай в магазин, выбирай экипировку и находи свой стиль</p>
+                
+                <div class="contacts__grid">
+                    <div class="contacts__info fade-in">
+                        <div class="contact__block">
+                            <span class="contact__label">АДРЕС</span>
+                            <span class="contact__value">г. Иркутск, ул. Байкальская, 107А/2</span>
+                            <span class="contact__value contact__value--accent">ЦОКОЛЬНЫЙ ЭТАЖ</span>
+                        </div>
+                        
+                        <div class="contact__block">
+                            <span class="contact__label">ТЕЛЕФОН</span>
+                            <span class="contact__value">
+                                <a href="tel:+73952717560">+7 (3952) 71-75-60</a>
+                            </span>
+                        </div>
+                        
+                        <div class="contact__block">
+                            <span class="contact__label">СОЦИАЛЬНЫЕ СЕТИ</span>
+                            <a href="#" class="btn btn--olive vk-link" target="_blank" rel="noopener noreferrer">НАПИСАТЬ В ВК</a>
+                        </div>
+
+                        <div class="contacts__actions">
+                            <a href="https://yandex.ru/maps/?text=Иркутск%2C%20Байкальская%2C%20107А%2F2" target="_blank" rel="noopener noreferrer" class="btn btn--outline">ПОСТРОИТЬ МАРШРУТ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts__image-wrapper fade-in">
+                        <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactical Frog — Тактическая одежда в Иркутске</title>
+    <meta name="description" content="TACTICAL FROG — магазин тактической одежды, экипировки для страйкбола, охоты и туризма в Иркутске. Выгодные цены и скидки до 80%.">
+    <meta name="keywords" content="тактическая одежда, Иркутск, military, outdoor, страйкбол, охота, туризм, Tactical Frog">
+    <meta name="theme-color" content="#111111">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #111111;
+            --bg-secondary: #222222;
+            --color-olive: #4A5330;
+            --color-sand: #C3B091;
+            --color-accent: #F07824;
+            --text-primary: #F2F0E9;
+            --text-secondary: #A5A5A0;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Roboto Condensed', sans-serif;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-family: var(--font-heading);
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn--accent {
+            background-color: var(--color-accent);
+            color: var(--bg-primary);
+            border-color: var(--color-accent);
+        }
+
+        .btn--accent:hover {
+            background-color: transparent;
+            color: var(--color-accent);
+        }
+
+        .btn--outline {
+            background-color: transparent;
+            color: var(--text-primary);
+            border-color: var(--text-primary);
+        }
+
+        .btn--outline:hover {
+            background-color: var(--text-primary);
+            color: var(--bg-primary);
+        }
+
+        .btn--olive {
+            background-color: var(--color-olive);
+            color: var(--text-primary);
+            border-color: var(--color-olive);
+        }
+
+        .btn--olive:hover {
+            background-color: transparent;
+            color: var(--color-olive);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 48px;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .fade-in {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* HEADER */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 16px 0;
+        }
+
+        .header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .logo__icon {
+            width: 32px;
+            height: 32px;
+            fill: var(--color-accent);
+        }
+
+        .header__nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .header__actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+        }
+
+        .menu-btn span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background-color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        .menu-btn.is-active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-btn.is-active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-btn.is-active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero__image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero__image-wrapper img {
+            object-position: center 20%;
+        }
+
+        .hero__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(17,17,17,0.98) 0%, rgba(17,17,17,0.85) 40%, rgba(17,17,17,0.4) 100%);
+            z-index: 2;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            padding-top: 60px;
+        }
+
+        .hero__tag {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            letter-spacing: 0.2em;
+            color: var(--color-sand);
+            border-left: 3px solid var(--color-accent);
+            padding-left: 12px;
+            margin-bottom: 24px;
+        }
+
+        .hero__title {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 24px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero__subtitle {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 500px;
+            line-height: 1.5;
+        }
+
+        .hero__actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .hero__mark {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* CATALOG */
+        .catalog {
+            padding: 100px 0;
+            background-color: var(--bg-primary);
+        }
+
+        .catalog__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .catalog__card {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background-color: var(--bg-secondary);
+            cursor: pointer;
+            group: true;
+        }
+
+        .catalog__card-image {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .catalog__card:hover .catalog__card-image {
+            transform: scale(1.05);
+        }
+
+        .catalog__card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 32px;
+            background: linear-gradient(to top, rgba(17,17,17,0.95) 0%, rgba(17,17,17,0) 100%);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .catalog__card-mark {
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            color: var(--color-accent);
+            letter-spacing: 0.15em;
+        }
+
+        .catalog__card-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .catalog__card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* ADVANTAGES */
+        .advantages {
+            padding: 100px 0;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .advantages__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .advantage__item {
+            padding: 32px;
+            border: 1px solid rgba(255,255,255,0.05);
+            background-color: rgba(17,17,17,0.5);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .advantage__item:hover {
+            border-color: var(--color-olive);
+        }
+
+        .advantage__item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-olive);
+        }
+
+        .advantage__number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            line-height: 1;
+            margin-bottom: 16px;
+            opacity: 0.8;
+        }
+
+        .advantage__title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .advantage__text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .advantage__item--highlight {
+            grid-column: span 1;
+            border-color: var(--color-accent);
+            background-color: rgba(240, 120, 36, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .advantage__item--highlight .advantage__number {
+            font-size: 4rem;
+            color: var(--color-accent);
+            opacity: 1;
+        }
+
+        .advantage__item--highlight .advantage__title {
+            font-size: 2rem;
+            color: var(--color-accent);
+        }
+
+        /* CONTACTS */
+        .contacts {
+            padding: 100px 0;
+            background-color: var(--bg-primary);
+        }
+
+        .contacts__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: stretch;
+        }
+
+        .contacts__info {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .contact__block {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact__label {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            color: var(--color-sand);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .contact__value {
+            font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .contact__value--accent {
+            color: var(--color-accent);
+        }
+
+        .contact__value a {
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact__value a:hover {
+            border-bottom-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        .contacts__image-wrapper {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+            background-color: var(--bg-secondary);
+            overflow: hidden;
+        }
+
+        .contacts__image-label {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 8px 16px;
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            color: var(--color-sand);
+            border-left: 3px solid var(--color-accent);
+            z-index: 2;
+        }
+
+        .contacts__actions {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #0a0a0a;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer__inner {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .footer__top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 48px;
+        }
+
+        .footer__desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 16px;
+            max-width: 300px;
+            line-height: 1.5;
+        }
+
+        .footer__heading {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .footer__links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer__links a {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .footer__links a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer__bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer__copyright {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer__motto {
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            color: var(--color-olive);
+            text-transform: uppercase;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .catalog__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .catalog__card:last-child {
+                grid-column: span 2;
+                height: 400px;
+            }
+            .advantages__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .advantage__item--highlight {
+                grid-column: span 2;
+            }
+            .footer__top {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: flex;
+            }
+
+            .header__nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background-color: var(--bg-secondary);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 100px 32px 32px;
+                gap: 32px;
+                transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                border-left: 1px solid rgba(255,255,255,0.05);
+            }
+
+            .header__nav.is-active {
+                right: 0;
+            }
+
+            .header__actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .header__actions .btn {
+                width: 100%;
+            }
+
+            .catalog__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .catalog__card, .catalog__card:last-child {
+                grid-column: span 1;
+                height: 400px;
+            }
+
+            .advantages__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .advantage__item--highlight {
+                grid-column: span 1;
+            }
+
+            .contacts__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contacts__image-wrapper {
+                min-height: 300px;
+                order: -1;
+            }
+
+            .footer__top {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero__content {
+                padding-top: 40px;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <svg class="logo__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    <path d="M12 4l-1.5 3h3L12 4z" fill="currentColor"/>
+                    <path d="M7 14c0-2.5 2-4.5 4.5-4.5S16 11.5 16 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                TACTICAL FROG
+            </a>
+            
+            <button class="menu-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="header__nav">
+                <div class="header__actions">
+                    <a href="#catalog" class="btn btn--outline">КАТАЛОГ</a>
+                    <a href="tel:+73952717560" class="btn btn--accent">СВЯЗАТЬСЯ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero__image-wrapper">
+                <img src="hero-man.jpg" alt="Мужчина в тактической одежде Tactical Frog">
+            </div>
+            <div class="hero__overlay"></div>
+            <div class="container hero__content fade-in">
+                <span class="hero__tag">TACTICAL GEAR / URBAN OUTDOOR</span>
+                <h1 class="hero__title">ТАКТИЧЕСКАЯ ОДЕЖДА<br>В ИРКУТСКЕ</h1>
+                <p class="hero__subtitle">Надежная одежда для тех, кто выбирает практичность, свободу движения и готовность к любым условиям</p>
+                <div class="hero__actions">
+                    <a href="#catalog" class="btn btn--accent">СКИДКИ ДО 80%</a>
+                    <span class="hero__mark">Одежда. Экипировка. Активный отдых.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2 class="section-title fade-in">ВЫБЕРИ СВОЮ ЭКИПИРОВКУ</h2>
+                <p class="section-subtitle fade-in">Практичная одежда для города, природы и активного образа жизни</p>
+                
+                <div class="catalog__grid">
+                    <article class="catalog__card fade-in">
+                        <div class="catalog__card-image">
+                            <img src="jacket.jpg" alt="Тактическая куртка">
+                        </div>
+                        <div class="catalog__card-overlay">
+                            <span class="catalog__card-mark">01 / OUTERWEAR</span>
+                            <h3 class="catalog__card-title">КУРТКИ</h3>
+                            <p class="catalog__card-desc">Защита и комфорт в любых условиях</p>
+                        </div>
+                    </article>
+
+                    <article class="catalog__card fade-in">
+                        <div class="catalog__card-image">
+                            <img src="pants.jpg" alt="Тактические брюки карго">
+                        </div>
+                        <div class="catalog__card-overlay">
+                            <span class="catalog__card-mark">02 / TACTICAL PANTS</span>
+                            <h3 class="catalog__card-title">БРЮКИ</h3>
+                            <p class="catalog__card-desc">Функциональность и свобода движения</p>
+                        </div>
+                    </article>
+
+                    <article class="catalog__card fade-in">
+                        <div class="catalog__card-image">
+                            <img src="shirt.jpg" alt="Тактическая рубашка">
+                        </div>
+                        <div class="catalog__card-overlay">
+                            <span class="catalog__card-mark">03 / TACTICAL SHIRTS</span>
+                            <h3 class="catalog__card-title">РУБАШКИ</h3>
+                            <p class="catalog__card-desc">Практичность в каждой детали</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages" class="advantages">
+            <div class="container">
+                <h2 class="section-title fade-in">ПОЧЕМУ ВЫБИРАЮТ TACTICAL FROG</h2>
+                <p class="section-subtitle fade-in">Все необходимое для комфортной покупки и выгодного выбора</p>
+                
+                <div class="advantages__grid">
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">01</div>
+                        <h3 class="advantage__title">ТАКТИЧЕСКИЙ СТИЛЬ</h3>
+                        <p class="advantage__text">Практичная одежда для города, охоты, страйкбола и активного отдыха.</p>
+                    </div>
+                    
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">02</div>
+                        <h3 class="advantage__title">ДОСТАВКА</h3>
+                        <p class="advantage__text">Возможность заказать понравившиеся товары с доставкой.</p>
+                    </div>
+                    
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">03</div>
+                        <h3 class="advantage__title">САМОВЫВОЗ</h3>
+                        <p class="advantage__text">Заберите покупку самостоятельно в нашем магазине в Иркутске.</p>
+                    </div>
+                    
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">04</div>
+                        <h3 class="advantage__title">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</h3>
+                        <p class="advantage__text">Отличный подарок для тех, кто ценит практичную одежду и экипировку.</p>
+                    </div>
+                    
+                    <div class="advantage__item fade-in">
+                        <div class="advantage__number">05</div>
+                        <h3 class="advantage__title">ДИСКОНТНАЯ СИСТЕМА</h3>
+                        <p class="advantage__text">Выгодные условия покупок для участников дисконтной системы.</p>
+                    </div>
+                    
+                    <div class="advantage__item advantage__item--highlight fade-in">
+                        <div class="advantage__number">06</div>
+                        <h3 class="advantage__title">СКИДКИ ДО 80%</h3>
+                        <p class="advantage__text">Возможность приобрести товары с существенной выгодой.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2 class="section-title fade-in">НАЙДИ НАС В ИРКУТСКЕ</h2>
+                <p class="section-subtitle fade-in">Заглядывай в магазин, выбирай экипировку и находи свой стиль</p>
+                
+                <div class="contacts__grid">
+                    <div class="contacts__info fade-in">
+                        <div class="contact__block">
+                            <span class="contact__label">АДРЕС</span>
+                            <span class="contact__value">г. Иркутск, ул. Байкальская, 107А/2</span>
+                            <span class="contact__value contact__value--accent">ЦОКОЛЬНЫЙ ЭТАЖ</span>
+                        </div>
+                        
+                        <div class="contact__block">
+                            <span class="contact__label">ТЕЛЕФОН</span>
+                            <span class="contact__value">
+                                <a href="tel:+73952717560">+7 (3952) 71-75-60</a>
+                            </span>
+                        </div>
+                        
+                        <div class="contact__block">
+                            <span class="contact__label">СОЦИАЛЬНЫЕ СЕТИ</span>
+                            <a href="#" class="btn btn--olive vk-link" target="_blank" rel="noopener noreferrer">НАПИСАТЬ В ВК</a>
+                        </div>
+
+                        <div class="contacts__actions">
+                            <a href="https://yandex.ru/maps/?text=Иркутск%2C%20Байкальская%2C%20107А%2F2" target="_blank" rel="noopener noreferrer" class="btn btn--outline">ПОСТРОИТЬ МАРШРУТ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contacts__image-wrapper fade-in">
+                        <span class="contacts__image-label">TACTICAL FROG / IRKUTSK</span>
+                        <img src="fasad.jpg" alt="Фасад магазина Tactical Frog в Иркутске">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__top">
+                <div>
+                    <a href="#" class="logo">
+                        <svg class="logo__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                            <path d="M12 4l-1.5 3h3L12 4z" fill="currentColor"/>
+                            <path d="M7 14c0-2.5 2-4.5 4.5-4.5S16 11.5 16 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        TACTICAL FROG
+                    </a>
+                    <p class="footer__desc">Тактическая одежда и экипировка в Иркутске. Надежность, практичность и выгодные условия для каждого.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer__heading">КОНТАКТЫ</h4>
+                    <div class="footer__links">
+                        <a href="tel:+73952717560">+7 (3952) 71-75-60</a>
+                        <span>г. Иркутск, ул. Байкальская, 107А/2</span>
+                        <span>Цокольный этаж</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="footer__heading">МЫ В СОЦСЕТЯХ</h4>
+                    <div class="footer__links">
+                        <a href="#" class="vk-link" target="_blank" rel="noopener noreferrer">Группа ВКонтакте</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <span class="footer__copyright">© 2026 TACTICAL FROG. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</span>
+                <span class="footer__motto">BUILT FOR ACTION. READY FOR ANYTHING.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const VK_GROUP_URL = "https://vk.com/tactical_frog_irkutsk";
+            
+            document.querySelectorAll('.vk-link').forEach(link => {
+                link.href = VK_GROUP_URL;
+            });
+
+            const menuBtn = document.querySelector('.menu-btn');
+            const nav = document.querySelector('.header__nav');
+            
+            menuBtn.addEventListener('click', () => {
+                nav.classList.toggle('is-active');
+                menuBtn.classList.toggle('is-active');
+            });
+
+            document.querySelectorAll('.header__nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('is-active');
+                    menuBtn.classList.remove('is-active');
+                });
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
